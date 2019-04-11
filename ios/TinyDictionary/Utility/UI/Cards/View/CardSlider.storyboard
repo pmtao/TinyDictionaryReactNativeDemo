@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8ze-SP-Lc0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cards View Controller-->
+        <scene sceneID="GoI-4k-bBn">
+            <objects>
+                <viewController id="8ze-SP-Lc0" customClass="CardsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTL-Ov-chp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QGq-bf-LpO">
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="hFf-86-1Uh" customClass="CardsLayout"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8ze-SP-Lc0" id="fH3-42-s5u"/>
+                                    <outlet property="delegate" destination="8ze-SP-Lc0" id="RHD-et-Xdl"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="1" translatesAutoresizingMaskIntoConstraints="NO" id="tEQ-2U-ZWo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="JLw-aX-skr"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QGq-bf-LpO" secondAttribute="bottom" id="3UU-uC-yk2"/>
+                            <constraint firstAttribute="trailing" secondItem="QGq-bf-LpO" secondAttribute="trailing" id="7bW-YZ-MzV"/>
+                            <constraint firstItem="tEQ-2U-ZWo" firstAttribute="leading" secondItem="VTL-Ov-chp" secondAttribute="leading" id="BaK-xY-rIW"/>
+                            <constraint firstAttribute="trailing" secondItem="tEQ-2U-ZWo" secondAttribute="trailing" id="FoO-r2-nI7"/>
+                            <constraint firstItem="tEQ-2U-ZWo" firstAttribute="top" secondItem="psR-In-yMM" secondAttribute="top" id="Z91-ea-yZW"/>
+                            <constraint firstItem="QGq-bf-LpO" firstAttribute="leading" secondItem="VTL-Ov-chp" secondAttribute="leading" id="gPm-Fo-xL3"/>
+                            <constraint firstItem="QGq-bf-LpO" firstAttribute="top" secondItem="tEQ-2U-ZWo" secondAttribute="bottom" id="mxD-Ws-07N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="psR-In-yMM"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="QGq-bf-LpO" id="f9R-OJ-2cG"/>
+                        <outlet property="pageControl" destination="tEQ-2U-ZWo" id="wZc-5R-xxr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaJ-cj-MBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15.199999999999999" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>

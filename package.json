@@ -1,0 +1,14 @@
+{
+  "name": "ReactDictionary",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "yarn react-native start",
+    "bundle-ios": "node node_modules/react-native/local-cli/cli.js bundle --entry-file index.ios.js  --platform ios --dev false --bundle-output ./ios/bundle/index.ios.jsbundle --assets-dest ./ios/bundle"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.0",
+    "react": "16.8.3",
+    "react-native": "^0.59.2"
+  }
+}
