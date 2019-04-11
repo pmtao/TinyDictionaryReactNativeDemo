@@ -1,5 +1,7 @@
 # React Native 示例项目
 
+本项目是一个简单的词典查询 APP，单词的详细解释页通过 React Native 进行实现。
+
 
 
 ## 安装步骤
